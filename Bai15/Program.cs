@@ -42,12 +42,6 @@ public class ProductRepository : IProductRepository
         _context.SaveChanges();
     }
 
-    public void Update(Product product)
-    {
-        _context.Entry(product).State = EntityState.Modified;
-        _context.SaveChanges();
-    }
-
     public void Delete(int id)
     {
         var product = _context.Products.Find(id);
