@@ -10,7 +10,6 @@ namespace Bai15
     {
         public int ProductID { get; set; }
         public string Name { get; set; }
-        public ICollection<Model> Models { get; set; }
     }
 
     public class Model
