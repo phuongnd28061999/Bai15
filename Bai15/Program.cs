@@ -10,10 +10,7 @@ using System.Threading.Tasks;
 Console.WriteLine("Hello, World!");
 public interface IProductRepository
 {
-    IEnumerable<Product> GetAll();
-    Product GetById(int id);
     void Add(Product product);
-    void Update(Product product);
     void Delete(int id);
 }
 
@@ -24,16 +21,6 @@ public class ProductRepository : IProductRepository
     public ProductRepository(ProductDbContext context)
     {
         _context = context;
-    }
-
-    public IEnumerable<Product> GetAll()
-    {
-        return _context.Products.ToList();
-    }
-
-    public Product GetById(int id)
-    {
-        return _context.Products.Find(id);
     }
 
     public void Add(Product product)
