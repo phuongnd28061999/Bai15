@@ -9,7 +9,7 @@ namespace Bai15
 {
     public class ProductDbContext
     {
-        public ProductDbContext() : base("abc") 
+        public ProductDbContext() : base("Server=localhost;Database=ProductMaster;User Id=sa;Password=123456") 
         {
 
         }
